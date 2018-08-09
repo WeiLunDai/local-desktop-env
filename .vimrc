@@ -62,6 +62,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC     " auto reload .vimrc
 " other 
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>            " edit .vimrc anywhere
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel       " make word => "word"
+nnoremap <leader>h :help <cWORD><CR>
 
 " buffer
 nnoremap <C-right> :bn<CR>                          " next buffer
