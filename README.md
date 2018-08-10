@@ -1,3 +1,8 @@
-# vimrc  
-last modify : 08/09/2018  
-description : simple .vimrc file
+# Vimrc 
+
+Now Status : 
+規劃中
+
+## Introduction
+*   Backup .vimrc 
+*   Develop my editor

@@ -10,6 +10,12 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
+Plug 'vimwiki/vimwiki'
+
+" markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'suan/vim-instant-markdown'
 
 " file
 Plug 'junegunn/fzf'
@@ -60,17 +66,24 @@ filetype indent plugin on
 autocmd BufWritePost $MYVIMRC source $MYVIMRC     " auto reload .vimrc
 
 " other 
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>            " edit .vimrc anywhere
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel       " make word => "word"
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+" edit .vimrc anywhere
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+" make word => "word"
 nnoremap <leader>h :help <cWORD><CR>
 
 " buffer
-nnoremap <C-right> :bn<CR>                          " next buffer
-nnoremap <C-left> :bp<CR>                           " previous buffer
+nnoremap <C-right> :bn<CR>
+" next buffer
+nnoremap <C-left> :bp<CR>
+" previous buffer
 
+" some error
 " jump
-nnoremap <C-j> /<+.\{-1,}+><CR>c/+>/e<CR>           " jump to <+...+> in normal mode
-inoremap <C-j> <ESC>/<+.\{-1,}+><CR>c/+>/e<CR>      " jump to <+...+> in insert mode
+nnoremap <C-j> /<+.\{-1,}+><CR>c/+>/e<CR>
+" jump to <+...+> in normal mode
+inoremap <C-j> <ESC>/<+.\{-1,}+><CR>c/+>/e<CR>
+" jump to <+...+> in insert mode
 
 " complete
 inoremap <leader>k <C-x><C-k>                       
@@ -79,6 +92,14 @@ inoremap <leader>k <C-x><C-k>
 " <C-x><C-n>: complete words from the current buffer
 " <C-x><C-t>: complete words from the thesaurus
 " <C-x><C-i>: words from the current and included files
+"
+
+" some error
+" c syntax simple map
+noremap <leader>if iif (<+condition+>) {<CR>}<esc>%o<esc>
+noremap <leader>for ifor (<+inital+> ; <+condition+> ; <+++> ) {<CR>}<esc>%o<esc>
+noremap <leader>while iwhile (<+condition+>) {<CR>}<esc>%o<esc>
+noremap <leader>fun i<+return+> <+funame+> (<+argements+>)<CR>{<CR><CR>}<esc>%<esc>kk
 
 
 " *****************
@@ -103,7 +124,7 @@ nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 "
 
 let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-let g:ycm_server_python_interpreter='/usr/bin/python3.6'
+let g:ycm_server_python_interpreter='/usr/bin/python3.7'
 let g:ycm_error_symbol='>>'
 let g:ycm_warning_symbol='>*'
 let g:ycm_collect_identifiers_from_tags_files=1
@@ -159,4 +180,9 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" 
+" vim-markdown
+" 
+let g:vim_markdown_math=1
 
