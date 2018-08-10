@@ -10,6 +10,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/vim-easy-align'
+Plug 'vimwiki/vimwiki'
 
 " file
 Plug 'junegunn/fzf'
