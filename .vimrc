@@ -16,6 +16,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'suan/vim-instant-markdown'
+" markdown preview
+"
 
 " file
 Plug 'junegunn/fzf'
