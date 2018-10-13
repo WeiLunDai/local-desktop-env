@@ -5,4 +5,5 @@ Now Status :
 
 ## Introduction
 *   Backup .vimrc 
+*   upload .vim directory
 *   Develop my editor

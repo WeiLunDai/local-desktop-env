@@ -16,8 +16,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'suan/vim-instant-markdown'
-" markdown preview
-"
 
 " file
 Plug 'junegunn/fzf'
@@ -31,7 +29,6 @@ Plug 'altercation/vim-colors-solarized'
 " other
 Plug 'vim-utils/vim-man'
 Plug 'vimwiki/vimwiki'
-
 call plug#end()
 
 " *****************
@@ -61,24 +58,31 @@ set autoindent
 set smartindent
 set cursorline
 
+"set foldenable
+"set foldmethod=syntax
+
 set dictionary+=/usr/share/dict/words
+set spell
 syntax on
 filetype indent plugin on 
 
 autocmd BufWritePost $MYVIMRC source $MYVIMRC     " auto reload .vimrc
 
 " other 
-nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 " edit .vimrc anywhere
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 " make word => "word"
 nnoremap <leader>h :help <cWORD><CR>
 
 " buffer
-nnoremap <C-right> :bn<CR>
+
 " next buffer
-nnoremap <C-left> :bp<CR>
+nnoremap <C-right> :bn<CR>
+
 " previous buffer
+nnoremap <C-left> :bp<CR>
 
 " some error
 " jump
@@ -88,7 +92,7 @@ inoremap <C-j> <ESC>/<+.\{-1,}+><CR>c/+>/e<CR>
 " jump to <+...+> in insert mode
 
 " complete
-inoremap <leader>k <C-x><C-k>                       
+inoremap <leader>k <C-x><C-k>
 " complete words from the dictionary
 " <C-x><C-l>: complete whole lines of the text
 " <C-x><C-n>: complete words from the current buffer
@@ -126,7 +130,7 @@ nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 "
 
 let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-let g:ycm_server_python_interpreter='/usr/bin/python3.7'
+"let g:ycm_server_python_interpreter='/usr/bin/python3.7'
 let g:ycm_error_symbol='>>'
 let g:ycm_warning_symbol='>*'
 let g:ycm_collect_identifiers_from_tags_files=1
