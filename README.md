@@ -1,9 +1,8 @@
 # Vimrc 
 
 Now Status : 
-規劃中
+沒有規劃
 
 ## Introduction
-*   Backup .vimrc 
+*   Backup .vimrc and local conf file
 *   upload .vim directory
-*   Develop my editor
